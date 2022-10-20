@@ -56,6 +56,8 @@
 
 <script>
 
+import { mapActions } from 'vuex'
+
 export default {
   name: 'Index',
   data () {
@@ -66,23 +68,36 @@ export default {
         reference: null,
       },
       options: [
-        'Selecione', 'Live', 'TestarPagamento', 'PagarCurso', 'DoarValor'
+        'Selecione', 'LiveTest-Onésimo', 'TestarPagamento', 'PagarCurso', 'DoarValor'
       ]
     }
   },
   methods: {
+    ...mapActions('payment', [
+      'handlePayment'
+    ]),
+
     onSubmit () {
+      let payload = {
+        amount: this.payload.amount,
+        phone: this.payload.phone,
+        reference: this.payload.reference
+      }
 
+      console.log('payload', payload)
 
-      this.$q.notify({
-        color: 'green-4',
-        textColor: 'white',
-        icon: 'check_circle',
-        message: 'Parabens, Formulario Submetido...'
+      this.handlePayment(payload).then(response => {
+        this.$q.notify({
+          color: 'green-4',
+          textColor: 'white',
+          icon: 'check_circle',
+          message: 'Parabens, Formulario Submetido...'
+        })
       })
-
-    },
-
+      .catch(error => {
+        console.error('Falha no processo c2b')
+      })
+    }
   }
 }
 </script>

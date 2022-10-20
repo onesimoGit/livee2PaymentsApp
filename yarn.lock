@@ -1706,7 +1706,7 @@ autoprefixer@10.4.2:
     picocolors "^1.0.0"
     postcss-value-parser "^4.2.0"
 
-axios@^0.21.1:
+axios@^0.21.0, axios@^0.21.1:
   version "0.21.4"
   resolved "https://registry.yarnpkg.com/axios/-/axios-0.21.4.tgz#c67b90dc0568e5c1cf2b0b858c43ba28e2eda575"
   integrity sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==
@@ -2581,6 +2581,13 @@ duplexer@^0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/duplexer/-/duplexer-0.1.2.tgz#3abe43aef3835f8ae077d136ddce0f276b0400e6"
   integrity sha512-jtD6YG370ZCIi/9GTaJKQxWTZD045+4R4hTk/x1UyoqadyJ9x9CgSi1RlVDQF8U2sxLLSnFkCaMihqljHIWgMg==
+
+e2payments@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/e2payments/-/e2payments-1.0.0.tgz#d7fbede827b11274ff9a2d46251bbee6ad4b33bb"
+  integrity sha512-vM66YZsvpLo9NviSI7dwl5ShmQtFNB+5sA+ghqZr42/5+lewjuIDywuEHlXrLQS09EvDucxStFKChBiqC8jHqA==
+  dependencies:
+    axios "^0.21.0"
 
 ee-first@1.1.1:
   version "1.1.1"
